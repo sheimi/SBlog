@@ -1,0 +1,32 @@
+<ul id="post-list" class="posts">
+  <li class="post-list-item" ng-repeat="post in posts">
+    <article class="post">
+      <div class="row">
+        <div class="meta col-sm-3">
+          <span class="date">
+            <span class="month">{{ post.date | date:'MMM' }}</span>
+            <span class="day">{{ post.date | date:'dd' }}</span>
+            <span class="year">{{ post.date | date:'yyyy' }}</span>
+          </span>
+          <span class="author">Posted by {{ post.author }}</span>
+          <span class="location">At {{ post.location }}</span>
+        </div>
+        <div class="col-sm-9">
+          <h1 class="post-title">
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h1>
+          <div class="content" ng-bind-html="post.thumbnail">
+          </div>
+          <div class="read-rest">
+            <a href="{{ post.url }}">Read the rest of this post &raquo;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </li>
+  <li class="archives">
+    <h1><a href="/archives">Archives</a></h1>
+  </li>
+</ul>

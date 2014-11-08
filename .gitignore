@@ -1,0 +1,5 @@
+.*.swp
+.DS_Store
+*.pyc
+.sass-cache
+db.sqlite3

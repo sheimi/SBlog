@@ -1,0 +1,18 @@
+<section id="blog-posts">
+  <h2 id="blog">Blog Posts</h2>
+  <ul class="posts post-archives-list">
+    <li class="row" ng-repeat="blog in posts | filter : { category: {name: 'blog'}}">
+      <span class="col-sm-4 list-date">{{ blog.date | date:'dd MMM yyyy' }} &raquo;</span>
+      <span class="col-sm-8"><a href="{{ blog.url }}">{{ blog.title }}</a></span>
+    </li>
+  </ul>
+</section>
+<section id="blog-notes">
+  <h2 id="note">Notes</h2>
+  <ul class="posts post-archives-list">
+    <li class="row" ng-repeat="note in posts | filter : { category: {name: 'note'}}">
+      <span class="col-sm-4 list-date">{{ note.date | date:'dd MMM yyyy' }} &raquo;</span>
+      <span class="col-sm-8"><a href="{{ note.url }}">{{ note.title }}</a></span>
+    </li>
+  </ul>
+</section>

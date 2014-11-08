@@ -1,0 +1,30 @@
+<article id="post" class="post">
+  <div class="row">
+    <div class="meta col-sm-3">
+      <span class="date">
+        <span class="month">{{ post.date | date:'MMM' }}</span>
+        <span class="day">{{ post.date | date:'dd' }}</span>
+        <span class="year">{{ post.date | date:'yyyy' }}</span>
+      </span>
+      <span class="author">Posted by {{ post.author }}</span>
+      <span class="location">At {{ post.location }}</span>
+      <div class="tags">
+        <ul class="post-tags">
+          <li ng-repeat="tag in post.tags">
+            <a href="/tags/{{tag.name}}">{{tag.name}}</a></li>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <h1 class="post-title"><a href="{{page.url}}">{{ post.title }}</a></h1>
+      <section>
+        <div class="content" ng-bind-html="post.content">
+        </div>
+        <p>~~~ That's All ~~~ *^o^* ~~~<p>
+      </section>
+    </div>
+  </div>
+</article>
+<div id="disqus_thread"></div>
+<script src="/static/js/disqus.js"></script>

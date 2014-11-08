@@ -1,0 +1,19 @@
+<section class="tag-cloud">
+  <h2>Tags</h2>
+  <div class="cloud">
+    <a href style="font-size: 1.5em" ng-click="selectTag('All')">All</a>
+    <span ng-repeat="tag in tags">
+      <a href style="font-size: {{ tag.size }}em" ng-click="selectTag(tag.name)">{{ tag.name }}</a>
+    </span>
+  </div>
+</section>
+
+<section class="blog-posts">
+  <h2>Posts has tag <span class="filter-result">{{ tagSelected }}</span></h2>
+  <ul class="posts post-archives-list">
+    <li class="row" ng-repeat="post in posts | filter : tagPostFilter">
+      <span class="col-sm-4 list-date">{{ post.date | date:'dd MMM yyyy' }} &raquo;</span>
+      <span class="col-sm-8"><a href="{{ post.url }}">{{ post.title }}</a></span>
+    </li>
+  </ul>
+</section>
