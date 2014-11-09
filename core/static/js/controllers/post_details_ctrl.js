@@ -5,7 +5,6 @@
   sblogApp = angular.module('sblogApp');
 
   PostDetailsCtrl = function($scope, $routeParams, $sce, post) {
-    post.content = $sce.trustAsHtml(post.content);
     return $scope.post = post;
   };
 

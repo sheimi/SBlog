@@ -5,11 +5,6 @@
   sblogApp = angular.module('sblogApp');
 
   PostListCtrl = function($scope, $sce, posts) {
-    var post, _i, _len;
-    for (_i = 0, _len = posts.length; _i < _len; _i++) {
-      post = posts[_i];
-      post.thumbnail = $sce.trustAsHtml(post.thumbnail);
-    }
     return $scope.posts = posts;
   };
 

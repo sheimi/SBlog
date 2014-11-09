@@ -1,5 +1,6 @@
 compile:
 	coffee -o core/static/js -c core/static/coffee
+	cat core/static/js/gist.js >> core/static/js/app.js
 	cat core/static/js/controllers/post_details_ctrl.js >> core/static/js/app.js
 	cat core/static/js/controllers/post_list_ctrl.js >> core/static/js/app.js
 	cat core/static/js/controllers/tags_ctrl.js >> core/static/js/app.js

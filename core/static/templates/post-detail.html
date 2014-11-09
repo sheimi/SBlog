@@ -19,7 +19,7 @@
     <div class="col-sm-9">
       <h1 class="post-title"><a href="{{page.url}}">{{ post.title }}</a></h1>
       <section>
-        <div class="content" ng-bind-html="post.content">
+        <div class="content" compile="post.content">
         </div>
         <p>~~~ That's All ~~~ *^o^* ~~~<p>
       </section>
