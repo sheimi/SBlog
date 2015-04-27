@@ -1,0 +1,12 @@
+{
+  "name": "sgit",
+  "version": "0.1",
+  "dependencies": {
+    "angular": "latest",
+    "angular-animate": "latest",
+    "angular-route": "latest",
+    "ngprogress": "latest",
+    "bootstrap": "latest",
+    "jquery": "latest"
+  }
+}
