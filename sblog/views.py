@@ -53,7 +53,7 @@ def default_404(request):
 
 def handle_404(request):
     raise JsonResponse({
-        error_code: 404,
+        'error_code': 404,
     })
 
 api_urls = [
