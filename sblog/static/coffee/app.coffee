@@ -74,3 +74,8 @@ routingFunc = ($routeProvider, $locationProvider) ->
     requireBase: false
 
 sblogApp.config ['$routeProvider', '$locationProvider', routingFunc]
+
+initGlobalFunc = ($rootScope) ->
+  $rootScope.title = ""
+
+sblogApp.run ['$rootScope', initGlobalFunc]

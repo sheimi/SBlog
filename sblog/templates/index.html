@@ -2,7 +2,8 @@
 <html lang="en" ng-app="sblogApp">
 <head>
   <meta charset="utf-8">
-  <title>Sheimi's Hive</title>
+  <title ng-if="title == ''">Sheimi's Hive</title>
+  <title ng-if="title != ''">{{'{{'}} title {{'}}'}}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="{{ static("images/favicon.ico") }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ static("bower_components/bootstrap/dist/css/bootstrap.css") }}">

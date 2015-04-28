@@ -1,6 +1,7 @@
 sblogApp = angular.module 'sblogApp'
 
-PostDetailsCtrl = ($scope, $routeParams, $sce, post) ->
+PostDetailsCtrl = ($scope, $rootScope, $routeParams, $sce, post) ->
   $scope.post = post.post
+  $rootScope.title = post.post.title
 
-sblogApp.controller 'PostDetailsCtrl', ['$scope', '$routeParams', '$sce', 'post', PostDetailsCtrl]
+sblogApp.controller 'PostDetailsCtrl', ['$scope', '$rootScope', '$routeParams', '$sce', 'post', PostDetailsCtrl]

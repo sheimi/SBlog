@@ -1,6 +1,7 @@
 sblogApp = angular.module 'sblogApp'
 
-TagsCtrl = ($scope, $http, $routeParams, data) ->
+TagsCtrl = ($scope, $rootScope, $http, $routeParams, data) ->
+  $rootScope.title = "Tags"
   for post in data.posts
     post.tagNames = {}
     for tag in post.tags
@@ -17,4 +18,4 @@ TagsCtrl = ($scope, $http, $routeParams, data) ->
       return true
     return $scope.tagSelected of value.tagNames
 
-sblogApp.controller 'TagsCtrl', ['$scope', '$http', '$routeParams', 'data', TagsCtrl]
+sblogApp.controller 'TagsCtrl', ['$scope', '$rootScope', '$http', '$routeParams', 'data', TagsCtrl]
